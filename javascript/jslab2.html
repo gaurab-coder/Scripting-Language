@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 2 - Control Structures</title>
+</head>
+<body>
+  <h2>Lab 2: if-else and switch</h2>
+  <script>
+    // if-else
+    var marks = 75;
+
+    document.write("<b>if-else Example</b><br>");
+    if (marks >= 80) {
+      document.write("Grade: A<br>");
+    } else if (marks >= 60) {
+      document.write("Grade: B<br>");
+    } else if (marks >= 40) {
+      document.write("Grade: C<br>");
+    } else {
+      document.write("Grade: F<br>");
+    }
+
+    document.write("<br>");
+
+    // switch
+    var day = 3;
+
+    document.write("<b>switch Example</b><br>");
+    switch (day) {
+      case 1:
+        document.write("Monday<br>");
+        break;
+      case 2:
+        document.write("Tuesday<br>");
+        break;
+      case 3:
+        document.write("Wednesday<br>");
+        break;
+      case 4:
+        document.write("Thursday<br>");
+        break;
+      case 5:
+        document.write("Friday<br>");
+        break;
+      default:
+        document.write("Weekend<br>");
+    }
+  </script>
+</body>
+</html>

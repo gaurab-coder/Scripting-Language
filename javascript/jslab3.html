@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 3 - Loops</title>
+</head>
+<body>
+  <h2>Lab 3: for, while, do-while Loops</h2>
+  <script>
+    // for loop
+    document.write("<b>for loop (1 to 5):</b><br>");
+    for (var i = 1; i <= 5; i++) {
+      document.write("i = " + i + "<br>");
+    }
+
+    document.write("<br>");
+
+    // while loop
+    document.write("<b>while loop (countdown from 5):</b><br>");
+    var n = 5;
+    while (n > 0) {
+      document.write("n = " + n + "<br>");
+      n--;
+    }
+
+    document.write("<br>");
+
+    // do-while loop
+    document.write("<b>do-while loop (runs at least once):</b><br>");
+    var x = 0;
+    do {
+      document.write("x = " + x + "<br>");
+      x++;
+    } while (x < 3);
+  </script>
+</body>
+</html>

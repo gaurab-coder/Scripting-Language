@@ -1,0 +1,11 @@
+let ram = [];
+ram.push(1);
+ram.push(2);
+console.log(ram);
+ram.pop();
+console.log(ram);
+ram.push("Sugam");
+console.log(ram);
+ram.push("Hello Everyone");
+ram.push("Welcome to the world of JavaScript");
+console.log(ram);

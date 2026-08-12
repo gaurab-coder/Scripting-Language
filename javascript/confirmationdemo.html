@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+
+let text = "Press a button!\n Either OK or Cancel.";
+if (confirm(text) == true) {
+
+text = "You pressed OK!";
+}
+else { text = "You canceled!";
+}
+
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body>
+</html>

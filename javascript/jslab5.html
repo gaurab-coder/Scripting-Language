@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 5 - Arrays and forEach</title>
+</head>
+<body>
+  <h2>Lab 5: Arrays and forEach Loop</h2>
+  <script>
+    // Creating an array
+    var fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+
+    document.write("<b>Array Elements:</b><br>");
+    document.write("First element: " + fruits[0] + "<br>");
+    document.write("Last element: "  + fruits[fruits.length - 1] + "<br>");
+    document.write("Array length: "  + fruits.length + "<br><br>");
+
+    // Modifying array
+    fruits.push("Pineapple");       // add to end
+    fruits.unshift("Strawberry");   // add to start
+    document.write("<b>After push and unshift:</b><br>");
+    document.write(fruits + "<br><br>");
+
+    // forEach loop
+    document.write("<b>forEach loop:</b><br>");
+    fruits.forEach(function(fruit, index) {
+      document.write(index + ": " + fruit + "<br>");
+    });
+
+    document.write("<br>");
+
+    // Numeric array operations
+    var numbers = [5, 3, 8, 1, 9, 2];
+    numbers.sort(function(a, b) { return a - b; });
+    document.write("<b>Sorted numbers:</b> " + numbers + "<br>");
+  </script>
+</body>
+</html>

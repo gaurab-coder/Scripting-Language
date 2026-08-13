@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 7 - Functions</title>
+</head>
+<body>
+  <h2>Lab 7: Defining and Invoking Functions</h2>
+  <script>
+    // Basic function
+    function greet(name) {
+      return "Hello, " + name + "!";
+    }
+    document.write(greet("Alice") + "<br>");
+    document.write(greet("Bob")   + "<br><br>");
+
+    // Function with multiple parameters
+    function add(a, b) {
+      return a + b;
+    }
+    document.write("<b>Sum of 5 and 7:</b> " + add(5, 7) + "<br><br>");
+
+    // Function with default-like logic
+    function power(base, exp) {
+      var result = 1;
+      for (var i = 0; i < exp; i++) {
+        result *= base;
+      }
+      return result;
+    }
+    document.write("<b>2 to the power 8:</b> " + power(2, 8) + "<br><br>");
+
+    // Function expression
+    var square = function(n) {
+      return n * n;
+    };
+    document.write("<b>Square of 9:</b> " + square(9) + "<br><br>");
+
+    // Recursive function
+    function factorial(n) {
+      if (n <= 1) return 1;
+      return n * factorial(n - 1);
+    }
+    document.write("<b>Factorial of 6:</b> " + factorial(6) + "<br>");
+  </script>
+</body>
+</html>

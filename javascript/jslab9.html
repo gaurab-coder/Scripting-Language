@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 9 - Browser Interaction</title>
+</head>
+<body>
+  <h2>Lab 9: Browser Interaction</h2>
+
+  <button onclick="showAlert()">Show Alert</button><br><br>
+  <button onclick="showPrompt()">Show Prompt</button><br><br>
+  <button onclick="showConfirm()">Show Confirm</button><br><br>
+  <button onclick="showWindowInfo()">Window Info</button><br><br>
+
+  <p id="output"></p>
+
+  <script>
+    function showAlert() {
+      alert("This is an alert box!");
+    }
+
+    function showPrompt() {
+      var name = prompt("Enter your name:", "Guest");
+      if (name != null) {
+        document.getElementById("output").innerHTML =
+          "Hello, " + name + "!";
+      }
+    }
+
+    function showConfirm() {
+      var result = confirm("Do you want to continue?");
+      if (result) {
+        document.getElementById("output").innerHTML =
+          "You clicked OK.";
+      } else {
+        document.getElementById("output").innerHTML =
+          "You clicked Cancel.";
+      }
+    }
+
+    function showWindowInfo() {
+      var info = "Window Width: "  + window.innerWidth  + "px\n" +
+                 "Window Height: " + window.innerHeight + "px\n" +
+                 "Page URL: "      + window.location.href;
+      document.getElementById("output").innerHTML =
+        info.replace(/\n/g, "<br>");
+    }
+  </script>
+</body>
+</html>

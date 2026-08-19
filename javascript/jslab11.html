@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Properties Example</title>
+</head>
+<body>
+
+<h2 id="title">DOM Example</h2>
+
+<button onclick="showPrompt()">Prompt</button>
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeStyle()">Change Style</button>
+
+<input type="text" id="input" value="Hello">
+
+<div id="box">Original Text</div>
+
+<script>
+function showPrompt() {
+    var name = prompt("Enter your name:", "Guest");
+    if (name)
+        document.getElementById("box").innerHTML = "Hello, " + name;
+}
+
+function changeText() {
+    var box = document.getElementById("box");
+    box.innerHTML = "Text changed via DOM!";
+    box.style.color = "blue";
+}
+
+function changeStyle() {
+    var box = document.getElementById("box");
+    box.style.backgroundColor = "lightyellow";
+    box.style.padding = "10px";
+    box.style.fontSize = "20px";
+}
+
+</script>
+
+</body>
+</html>

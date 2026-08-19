@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 10 - DOM Access and Manipulation</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Lab 10: DOM Access & Manipulation</h2>
+
+  <div class="box" id="myDiv">This is the original text.</div>
+  <p class="box" id="myPara">This paragraph will change color.</p>
+
+  <br>
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="changeCSS()">Change CSS</button>
+  <button onclick="resetAll()">Reset</button>
+
+  <script>
+    function changeText() {
+      // Access by ID and change innerHTML
+      document.getElementById("myDiv").innerHTML =
+        "<b>Text changed using DOM!</b>";
+    }
+
+    function changeColor() {
+      // Access by ID and change CSS color
+      document.getElementById("myPara").style.color = "red";
+      document.getElementById("myPara").innerHTML =
+        "This text is now red!";
+    }
+
+    function changeCSS() {
+      // Change multiple CSS properties
+      var div = document.getElementById("myDiv");
+      div.style.backgroundColor = "#d0f0c0";
+      div.style.fontSize         = "20px";
+      div.style.border           = "2px solid green";
+    }
+
+    function resetAll() {
+      document.getElementById("myDiv").innerHTML =
+        "This is the original text.";
+      document.getElementById("myDiv").style.cssText = "";
+
+      document.getElementById("myPara").innerHTML =
+        "This paragraph will change color.";
+      document.getElementById("myPara").style.color = "";
+    }
+  </script>
+</body>
+</html>

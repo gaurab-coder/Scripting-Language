@@ -8,4 +8,4 @@
 
 <!-- main.php -->
 <?php include("header.php"); ?>
-<p>Main page content.</p>
+<p>Main page content</p>
